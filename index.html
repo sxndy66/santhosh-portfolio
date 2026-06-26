@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Santhosh Velu — B.Tech AI & DS student, Python Developer & Web Developer." />
+  <meta name="keywords" content="Santhosh Velu, Python Developer, Web Developer, AI, Data Science, Portfolio, SBCEC" />
+  <meta name="author" content="Santhosh Velu" />
+  <meta property="og:title" content="Santhosh Velu — Developer Portfolio" />
+  <meta property="og:description" content="Python Developer & Web Developer. B.Tech AI & DS  Third year student student at SBCEC." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="santhosh.jpg" />
+  <title>Santhosh Velu — Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Manrope:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="dark-mode">
+
+  <!-- Custom Cursor -->
+  <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+  <div class="cursor-dot"  id="cursorDot"  aria-hidden="true"></div>
+
+  <!-- ====== LOADING SCREEN ====== -->
+  <div id="loader" class="loader" aria-hidden="true">
+    <div class="loader-inner">
+      <div class="loader-name">SANTHOSH</div>
+      <div class="loader-sub">Portfolio Loading</div>
+      <div class="loader-bar-wrap">
+        <div class="loader-bar"><div class="loader-fill" id="loaderFill"></div></div>
+        <span class="loader-pct" id="loaderPct">0%</span>
+      </div>
+    </div>
+    <!-- Skeleton cards behind loader -->
+    <div class="skeleton-bg" aria-hidden="true">
+      <div class="skel skel-1"></div>
+      <div class="skel skel-2"></div>
+      <div class="skel skel-3"></div>
+    </div>
+  </div>
+
+  <!-- ====== NAVBAR ====== -->
+  <header class="navbar" id="navbar" role="banner">
+    <nav class="nav-container" aria-label="Main navigation">
+      <a href="#hero" class="nav-logo" aria-label="Go to top">
+        <span class="logo-bracket">&lt;</span>SV<span class="logo-bracket">/&gt;</span>
+      </a>
+      <ul class="nav-menu" id="navMenu" role="list">
+        <li><a href="#about"        class="nav-link">About</a></li>
+        <li><a href="#skills"       class="nav-link">Skills</a></li>
+        <li><a href="#projects"     class="nav-link">Projects</a></li>
+        <li><a href="#education"    class="nav-link">Education</a></li>
+        <li><a href="#achievements" class="nav-link">Achievements</a></li>
+        <li><a href="#github-stats" class="nav-link">GitHub</a></li>
+        <li><a href="#contact"      class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle magnetic" id="themeToggle" aria-label="Toggle theme">
+          <i class="fas fa-moon" id="themeIcon"></i>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+          <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ====== HERO ====== -->
+    <section class="hero-section" id="hero" aria-label="Hero introduction">
+      <!-- Aurora background -->
+      <div class="aurora" aria-hidden="true">
+        <div class="aurora-layer aurora-1"></div>
+        <div class="aurora-layer aurora-2"></div>
+        <div class="aurora-layer aurora-3"></div>
+      </div>
+      <!-- Grid overlay -->
+      <div class="hero-grid-bg" aria-hidden="true"></div>
+      <!-- Three.js canvas for floating 3D objects -->
+      <canvas id="heroCanvas" aria-hidden="true"></canvas>
+
+      <div class="hero-content container">
+        <div class="hero-badge fade-in-up" style="--delay:.1s">
+          <span class="badge-dot"></span> Available for Internships &amp; Freelance
+        </div>
+
+        <h1 class="hero-name fade-in-up" style="--delay:.25s">
+          Santhosh<br/><span class="name-outline">Velu</span>
+        </h1>
+
+        <p class="hero-role fade-in-up" style="--delay:.4s">
+          <span class="typed-text" id="typedText"></span><span class="cursor" aria-hidden="true">|</span>
+        </p>
+
+        <p class="hero-tagline fade-in-up" style="--delay:.55s">
+          B.Tech AI &amp; Data Science student building real-world solutions with Python and the modern web. Currently at SBCEC, Arni.
+        </p>
+
+        <div class="hero-profile-card glass-card fade-in-up" style="--delay:.6s;max-width:340px;padding:12px;display:flex;align-items:center;gap:14px">
+          <img src="santhosh.jpg" alt="Santhosh Velu profile photo" loading="lazy" style="width:72px;height:72px;object-fit:cover;border-radius:50%;border:2px solid rgba(96,165,250,.35)" />
+          <div>
+            <h2 style="font-size:1rem;margin-bottom:2px">Santhosh Velu</h2>
+            <p style="font-size:.8rem;margin:0">Python &amp; Web Developer</p>
+          </div>
+        </div>
+
+        <div class="hero-cta fade-in-up" style="--delay:.7s">
+          <a href="#projects" class="btn btn-primary magnetic">
+            View Projects <i class="fas fa-arrow-right"></i>
+          </a>
+          <a href="#contact" class="btn btn-ghost magnetic">Get in Touch</a>
+          <a href="santhoshresume.pdf" download="Santhosh-Velu-Resume.pdf" class="btn btn-ghost magnetic">
+            <i class="fas fa-download"></i> Resume
+          </a>
+        </div>
+
+        <div class="hero-socials fade-in-up" style="--delay:.85s">
+          <a href="https://github.com/sxndy66" target="_blank" rel="noopener noreferrer" class="social-pill" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://linkedin.com/in/santhoshvelu" target="_blank" rel="noopener noreferrer" class="social-pill" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="mailto:santhosh023166@gmail.com" class="social-pill" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+
+        <div class="scroll-hint fade-in-up" style="--delay:1s" aria-hidden="true">
+          <div class="scroll-line"></div>
+          <span>Scroll</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== STATS STRIP ====== -->
+    <div class="stats-strip">
+      <div class="container stats-inner">
+        <div class="stat-item reveal">
+          <span class="stat-num" data-target="3">0</span><span class="stat-suffix">+</span>
+          <span class="stat-label">Projects</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat-item reveal">
+          <span class="stat-num" data-target="10">0</span><span class="stat-suffix">+</span>
+          <span class="stat-label">Technologies</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat-item reveal">
+          <span class="stat-num" data-target="2028">0</span>
+          <span class="stat-label">Graduation</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat-item reveal">
+          <span class="stat-num" data-target="100">0</span><span class="stat-suffix">%</span>
+          <span class="stat-label">Committed</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ====== ABOUT ====== -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-eyebrow">Who I Am</p>
+          <h2 class="section-title" id="about-title">About Me</h2>
+          <div class="title-line"></div>
+        </div>
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p>I am a B.Tech student specializing in Artificial Intelligence and Data Science at Sri Balaji Chockalingam Engineering College (SBCEC), Arni, Tamil Nadu — currently in my third year and building toward a career as a Python Developer and Web Developer.</p>
+            <p>My focus is on creating practical, well-engineered tools — from academic performance trackers to developer analytics platforms. I enjoy the intersection of clean code and thoughtful design.</p>
+            <p>I am actively seeking internships and freelance opportunities where I can contribute, learn, and grow as a developer.</p>
+            <a href="santhoshresume.pdf" download="Santhosh-Velu-Resume.pdf" class="btn btn-primary magnetic" style="margin-top:20px">
+              <i class="fas fa-download"></i> Download Resume
+            </a>
+          </div>
+          <div class="about-cards">
+            <div class="info-card glass-card reveal" style="--sd:0ms">
+              <div class="info-icon"><i class="fas fa-graduation-cap"></i></div>
+              <div><h3>Education</h3><p>B.Tech — AI &amp; Data Science</p><span class="mono-tag">2024 – 2028</span></div>
+            </div>
+            <div class="info-card glass-card reveal" style="--sd:80ms">
+              <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div><h3>Location</h3><p>Arni, Tamil Nadu, India</p><span class="mono-tag">SBCEC</span></div>
+            </div>
+            <div class="info-card glass-card reveal" style="--sd:160ms">
+              <div class="info-icon"><i class="fas fa-code"></i></div>
+              <div><h3>Focus</h3><p>Python &amp; Web Development</p><span class="mono-tag">AI / Data Science</span></div>
+            </div>
+            <div class="info-card glass-card reveal" style="--sd:240ms">
+              <div class="info-icon"><i class="fas fa-briefcase"></i></div>
+              <div><h3>Status</h3><p>Open to Opportunities</p><span class="mono-tag status-open">Available Now</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== SKILLS ====== -->
+    <section class="section section-alt" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-eyebrow">What I Work With</p>
+          <h2 class="section-title" id="skills-title">Skills</h2>
+          <div class="title-line"></div>
+        </div>
+        <div class="skills-wrap">
+          <!-- Circular progress rings -->
+          <div class="rings-grid">
+            <div class="ring-card glass-card reveal" style="--sd:0ms" data-pct="85">
+              <div class="ring-wrap">
+                <svg class="ring-svg" viewBox="0 0 80 80" aria-hidden="true">
+                  <circle class="ring-track" cx="40" cy="40" r="34"/>
+                  <circle class="ring-fill" cx="40" cy="40" r="34" stroke-dasharray="213.6" stroke-dashoffset="213.6"/>
+                </svg>
+                <span class="ring-pct">85%</span>
+              </div>
+              <div class="ring-icon"><i class="fab fa-python"></i></div>
+              <span class="ring-name">Python</span>
+            </div>
+            <div class="ring-card glass-card reveal" style="--sd:60ms" data-pct="90">
+              <div class="ring-wrap">
+                <svg class="ring-svg" viewBox="0 0 80 80" aria-hidden="true">
+                  <circle class="ring-track" cx="40" cy="40" r="34"/>
+                  <circle class="ring-fill" cx="40" cy="40" r="34" stroke-dasharray="213.6" stroke-dashoffset="213.6"/>
+                </svg>
+                <span class="ring-pct">90%</span>
+              </div>
+              <div class="ring-icon"><i class="fab fa-html5"></i></div>
+              <span class="ring-name">HTML5</span>
+            </div>
+            <div class="ring-card glass-card reveal" style="--sd:120ms" data-pct="85">
+              <div class="ring-wrap">
+                <svg class="ring-svg" viewBox="0 0 80 80" aria-hidden="true">
+                  <circle class="ring-track" cx="40" cy="40" r="34"/>
+                  <circle class="ring-fill" cx="40" cy="40" r="34" stroke-dasharray="213.6" stroke-dashoffset="213.6"/>
+                </svg>
+                <span class="ring-pct">85%</span>
+              </div>
+              <div class="ring-icon"><i class="fab fa-css3-alt"></i></div>
+              <span class="ring-name">CSS3</span>
+            </div>
+            <div class="ring-card glass-card reveal" style="--sd:180ms" data-pct="80">
+              <div class="ring-wrap">
+                <svg class="ring-svg" viewBox="0 0 80 80" aria-hidden="true">
+                  <circle class="ring-track" cx="40" cy="40" r="34"/>
+                  <circle class="ring-fill" cx="40" cy="40" r="34" stroke-dasharray="213.6" stroke-dashoffset="213.6"/>
+                </svg>
+                <span class="ring-pct">80%</span>
+              </div>
+              <div class="ring-icon"><i class="fab fa-js"></i></div>
+              <span class="ring-name">JavaScript</span>
+            </div>
+            <div class="ring-card glass-card reveal" style="--sd:240ms" data-pct="75">
+              <div class="ring-wrap">
+                <svg class="ring-svg" viewBox="0 0 80 80" aria-hidden="true">
+                  <circle class="ring-track" cx="40" cy="40" r="34"/>
+                  <circle class="ring-fill" cx="40" cy="40" r="34" stroke-dasharray="213.6" stroke-dashoffset="213.6"/>
+                </svg>
+                <span class="ring-pct">75%</span>
+              </div>
+              <div class="ring-icon"><i class="fas fa-database"></i></div>
+              <span class="ring-name">MySQL</span>
+            </div>
+            <div class="ring-card glass-card reveal" style="--sd:300ms" data-pct="80">
+              <div class="ring-wrap">
+                <svg class="ring-svg" viewBox="0 0 80 80" aria-hidden="true">
+                  <circle class="ring-track" cx="40" cy="40" r="34"/>
+                  <circle class="ring-fill" cx="40" cy="40" r="34" stroke-dasharray="213.6" stroke-dashoffset="213.6"/>
+                </svg>
+                <span class="ring-pct">80%</span>
+              </div>
+              <div class="ring-icon"><i class="fab fa-git-alt"></i></div>
+              <span class="ring-name">Git</span>
+            </div>
+            <div class="ring-card glass-card reveal" style="--sd:360ms" data-pct="70">
+              <div class="ring-wrap">
+                <svg class="ring-svg" viewBox="0 0 80 80" aria-hidden="true">
+                  <circle class="ring-track" cx="40" cy="40" r="34"/>
+                  <circle class="ring-fill" cx="40" cy="40" r="34" stroke-dasharray="213.6" stroke-dashoffset="213.6"/>
+                </svg>
+                <span class="ring-pct">70%</span>
+              </div>
+              <div class="ring-icon"><i class="fas fa-plug"></i></div>
+              <span class="ring-name">REST APIs</span>
+            </div>
+            <div class="ring-card glass-card reveal" style="--sd:420ms" data-pct="65">
+              <div class="ring-wrap">
+                <svg class="ring-svg" viewBox="0 0 80 80" aria-hidden="true">
+                  <circle class="ring-track" cx="40" cy="40" r="34"/>
+                  <circle class="ring-fill" cx="40" cy="40" r="34" stroke-dasharray="213.6" stroke-dashoffset="213.6"/>
+                </svg>
+                <span class="ring-pct">65%</span>
+              </div>
+              <div class="ring-icon"><i class="fas fa-brain"></i></div>
+              <span class="ring-name">AI & DS</span>
+            </div>
+          </div>
+
+          <!-- Skill tags row -->
+          <div class="skill-tags reveal" style="--sd:200ms">
+            <span class="stag">Responsive Design</span>
+            <span class="stag">UI/UX Fundamentals</span>
+            <span class="stag">GitHub</span>
+            <span class="stag">Problem Solving</span>
+            <span class="stag">Cloudflare Workers</span>
+            <span class="stag">Gemini API</span>
+            <span class="stag">OCR</span>
+            <span class="stag">GitHub API</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== PROJECTS ====== -->
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-eyebrow">What I Have Built</p>
+          <h2 class="section-title" id="projects-title">Projects</h2>
+          <div class="title-line"></div>
+        </div>
+        <div class="projects-grid">
+
+          <article class="project-card glass-card reveal tilt-card" style="--sd:0ms" aria-label="iGrade project">
+            <div class="spotlight" aria-hidden="true"></div>
+            <div class="project-top">
+              <span class="project-num mono-tag">01</span>
+              <a href="https://github.com/sxndy66" target="_blank" rel="noopener noreferrer" class="proj-gh-link" aria-label="View on GitHub"><i class="fab fa-github"></i></a>
+            </div>
+            <div class="project-icon-wrap"><i class="fas fa-chart-line"></i></div>
+           <img src="igrade.png" alt="iGrade Student Performance Tracker" loading="lazy" style="width:100%;height:150px;object-fit:cover;border-radius:10px;border:1px solid rgba(96,165,250,.18)" />
+            <h3 class="project-title">iGrade</h3>
+            <p class="project-desc">Student performance tracking platform analyzing semester results, calculating GPA/CGPA, tracking arrears, and providing AI-powered academic insights.</p>
+            <div class="project-tags">
+              <span class="tech-tag">HTML</span><span class="tech-tag">CSS</span>
+              <span class="tech-tag">JavaScript</span><span class="tech-tag">OCR</span>
+              <span class="tech-tag">Gemini API</span><span class="tech-tag">Cloudflare</span>
+            </div>
+            <a href="https://github.com/sxndy66" target="_blank" rel="noopener noreferrer" class="proj-cta">
+              View Project <i class="fas fa-arrow-right"></i>
+            </a>
+          </article>
+
+          <article class="project-card glass-card reveal tilt-card" style="--sd:150ms" aria-label="GitRoot project">
+            <div class="spotlight" aria-hidden="true"></div>
+            <div class="project-top">
+              <span class="project-num mono-tag">02</span>
+              <a href="https://github.com/sxndy66" target="_blank" rel="noopener noreferrer" class="proj-gh-link" aria-label="View on GitHub"><i class="fab fa-github"></i></a>
+            </div>
+            <div class="project-icon-wrap"><i class="fab fa-github-alt"></i></div>
+           <img src="gitroot.png" alt="GitRoot Developer Analytics Platform" loading="lazy" style="width:100%;height:150px;object-fit:cover;border-radius:10px;border:1px solid rgba(96,165,250,.18)" />
+            <h3 class="project-title">GitRoot</h3>
+            <p class="project-desc">Developer analytics platform aggregating GitHub activity, contribution metrics, project insights, and portfolio generation from repository data.</p>
+            <div class="project-tags">
+              <span class="tech-tag">HTML</span><span class="tech-tag">CSS</span>
+              <span class="tech-tag">JavaScript</span><span class="tech-tag">GitHub API</span>
+            </div>
+            <a href="https://github.com/sxndy66" target="_blank" rel="noopener noreferrer" class="proj-cta">
+              View Project <i class="fas fa-arrow-right"></i>
+            </a>
+          </article>
+
+          <article class="project-card glass-card reveal tilt-card" style="--sd:300ms" aria-label="Personal Portfolio project">
+            <div class="spotlight" aria-hidden="true"></div>
+            <div class="project-top">
+              <span class="project-num mono-tag">03</span>
+              <a href="https://github.com/sxndy66" target="_blank" rel="noopener noreferrer" class="proj-gh-link" aria-label="View on GitHub"><i class="fab fa-github"></i></a>
+            </div>
+            <div class="project-icon-wrap"><i class="fas fa-user-circle"></i></div>
+           <img src="portfolio.png" alt="Santhosh Portfolio Website" loading="lazy" style="width:100%;height:150px;object-fit:cover;border-radius:10px;border:1px solid rgba(96,165,250,.18)" />
+            <h3 class="project-title">Personal Portfolio</h3>
+            <p class="project-desc">Modern responsive portfolio showcasing projects, skills, education, and achievements with premium UI/UX, aurora background, and 3D effects.</p>
+            <div class="project-tags">
+              <span class="tech-tag">HTML</span><span class="tech-tag">CSS</span>
+              <span class="tech-tag">JavaScript</span><span class="tech-tag">Three.js</span>
+            </div>
+            <a href="https://github.com/sxndy66" target="_blank" rel="noopener noreferrer" class="proj-cta">
+              View Project <i class="fas fa-arrow-right"></i>
+            </a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== EDUCATION ====== -->
+    <section class="section section-alt" id="education" aria-labelledby="edu-title">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-eyebrow">Academic Background</p>
+          <h2 class="section-title" id="edu-title">Education</h2>
+          <div class="title-line"></div>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item reveal">
+            <div class="tl-line" aria-hidden="true"><div class="tl-dot"><i class="fas fa-graduation-cap"></i></div></div>
+            <div class="tl-card glass-card">
+              <div class="tl-meta">
+                <span class="mono-tag tl-year">2024 – 2028</span>
+                <span class="badge-current">Current</span>
+              </div>
+              <h3>B.Tech — Artificial Intelligence &amp; Data Science</h3>
+              <p class="tl-inst">Sri Balaji Chockalingam Engineering College (SBCEC)</p>
+              <p class="tl-loc"><i class="fas fa-map-marker-alt"></i> Arni, Tamil Nadu, India</p>
+              <p>Pursuing a comprehensive curriculum in AI, Machine Learning, Data Science, and Software Engineering — actively building independent projects alongside coursework.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== EXPERIENCE ====== -->
+    <section class="section" id="experience" aria-labelledby="exp-title">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-eyebrow">Work History</p>
+          <h2 class="section-title" id="exp-title">Experience</h2>
+          <div class="title-line"></div>
+        </div>
+        <div class="exp-open glass-card reveal">
+          <div class="exp-icon-wrap"><i class="fas fa-rocket"></i></div>
+          <h3>Looking for My First Opportunity</h3>
+          <p>Actively seeking internships, part-time roles, and freelance projects in Python development and web development. I bring hands-on project experience, a fast learning curve, and real shipped work.</p>
+          <div class="exp-tags">
+            <span class="tech-tag">Python Development</span>
+            <span class="tech-tag">Web Development</span>
+            <span class="tech-tag">Freelance</span>
+            <span class="tech-tag">Internship</span>
+          </div>
+          <a href="mailto:santhosh023166@gmail.com" class="btn btn-primary magnetic">
+            <i class="fas fa-envelope"></i> Reach Out
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== ACHIEVEMENTS ====== -->
+    <section class="section section-alt" id="achievements" aria-labelledby="ach-title">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-eyebrow">Milestones</p>
+          <h2 class="section-title" id="ach-title">Achievements</h2>
+          <div class="title-line"></div>
+        </div>
+        <div class="ach-grid">
+          <div class="ach-card glass-card reveal" style="--sd:0ms">
+            <div class="ach-icon"><i class="fas fa-layer-group"></i></div>
+            <h3>Full-Stack Builder</h3>
+            <p>Developed multiple full-stack web applications independently, from frontend UI to backend logic and API integrations.</p>
+          </div>
+          <div class="ach-card glass-card reveal" style="--sd:80ms">
+            <div class="ach-icon"><i class="fas fa-cloud-upload-alt"></i></div>
+            <h3>Multi-Platform Deployments</h3>
+            <p>Shipped live projects on GitHub Pages, Vercel, Netlify, and Cloudflare Workers — experience across the full deployment lifecycle.</p>
+          </div>
+          <div class="ach-card glass-card reveal" style="--sd:160ms">
+            <div class="ach-icon"><i class="fab fa-github"></i></div>
+            <h3>Active GitHub Developer</h3>
+            <p>Maintaining a consistent GitHub presence with personal projects, academic work, and contributions to the developer community.</p>
+          </div>
+          <div class="ach-card glass-card reveal" style="--sd:240ms">
+            <div class="ach-icon"><i class="fas fa-brain"></i></div>
+            <h3>AI Integration Experience</h3>
+            <p>Integrated Gemini API with OCR into a real-world academic tool, combining AI capabilities with practical problem-solving.</p>
+          </div>
+          <div class="ach-card glass-card reveal" style="--sd:320ms">
+            <div class="ach-icon"><i class="fas fa-book-open"></i></div>
+            <h3>Continuous Learner</h3>
+            <p>Continuously expanding skills in Python, AI, Data Science, and modern web technologies through self-directed learning.</p>
+          </div>
+          <div class="ach-card glass-card reveal" style="--sd:400ms">
+            <div class="ach-icon"><i class="fas fa-code-branch"></i></div>
+            <h3>API Integration</h3>
+            <p>Built platforms consuming multiple third-party APIs including GitHub API and Google Gemini with proper error handling and UX.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== GITHUB STATS ====== -->
+   <section class="section" id="github-stats" aria-labelledby="gh-title">
+  <div class="container">
+    <div class="github-simple glass-card reveal">
+
+      <!-- Left Content -->
+      <div class="github-info">
+        <p class="section-eyebrow">Open Source Activity</p>
+        <h2 class="section-title" id="gh-title">GitHub Profile</h2>
+
+        <p class="github-text">
+          My GitHub profile shows my coding projects, practice work, and open-source activity.
+          It helps recruiters understand the technologies I use and the projects I build.
+        </p>
+
+        <a
+          href="https://github.com/sxndy66"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-ghost magnetic"
+        >
+          <i class="fab fa-github"></i>
+          View GitHub
+        </a>
+      </div>
+
+      <!-- Right Small Rectangle Image -->
+      <div class="github-lang-card">
+        <img
+          src="https://github-readme-stats.vercel.app/api/top-langs/?username=sxndy66&layout=compact&theme=tokyonight&hide_border=true"
+          alt="Most used languages by Santhosh"
+          loading="lazy"
+          onerror="showGithubFallback(this, 'GitHub languages unavailable')"
+        />
+        <div class="gh-fallback">
+          <i class="fab fa-github"></i>
+          <p>GitHub languages unavailable</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+    <!-- ====== CONTACT ====== -->
+    <section class="section section-alt" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-eyebrow">Let's Work Together</p>
+          <h2 class="section-title" id="contact-title">Contact</h2>
+          <div class="title-line"></div>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-left reveal">
+            <p class="contact-intro">Have a project, internship opportunity, or just want to connect? I would love to hear from you.</p>
+            <div class="contact-cards">
+              <a href="mailto:santhosh023166@gmail.com" class="ccard glass-card" aria-label="Send email">
+                <div class="ccard-icon"><i class="fas fa-envelope"></i></div>
+                <span class="ccard-name">Email</span>
+                <i class="fas fa-arrow-right ccard-arrow"></i>
+              </a>
+              <a href="https://github.com/sxndy66" target="_blank" rel="noopener noreferrer" class="ccard glass-card" aria-label="GitHub profile">
+                <div class="ccard-icon"><i class="fab fa-github"></i></div>
+                <span class="ccard-name">GitHub</span>
+                <i class="fas fa-arrow-right ccard-arrow"></i>
+              </a>
+              <a href="https://linkedin.com/in/santhoshvelu" target="_blank" rel="noopener noreferrer" class="ccard glass-card" aria-label="LinkedIn profile">
+                <div class="ccard-icon"><i class="fab fa-linkedin-in"></i></div>
+                <span class="ccard-name">LinkedIn</span>
+                <i class="fas fa-arrow-right ccard-arrow"></i>
+              </a>
+            </div>
+          </div>
+          <div class="contact-right reveal" style="--sd:100ms">
+            <form class="contact-form glass-card" id="web3Form" action="https://api.web3forms.com/submit" method="POST" aria-label="Contact form">
+              <input type="hidden" name="access_key" value="443f5feed23f4bb68df5d592744eb045" />
+              <input type="hidden" name="from_name" value="Santhosh Portfolio Website" />
+              <input type="hidden" name="subject" id="web3Subject" value="New message from Santhosh Portfolio" />
+              <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off" />
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="cName">Name</label>
+                  <input type="text" id="cName" name="name" class="form-input" placeholder="Your name" autocomplete="name" required />
+                </div>
+                <div class="form-group">
+                  <label for="cEmail">Email</label>
+                  <input type="email" id="cEmail" name="email" class="form-input" placeholder="your@email.com" autocomplete="email" required />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="cSubject">Subject</label>
+                <input type="text" id="cSubject" name="user_subject" class="form-input" placeholder="What is this about?" required />
+              </div>
+              <div class="form-group">
+                <label for="cMsg">Message</label>
+                <textarea id="cMsg" name="message" class="form-input form-textarea" rows="5" placeholder="Tell me about your project or opportunity..." required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary form-submit magnetic">
+                <span>Send Message</span> <i class="fas fa-paper-plane"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+        <a href="#hero" class="footer-logo" aria-label="Back to top">
+          <span class="logo-bracket">&lt;</span>Sxndy<span class="logo-bracket">/&gt;</span>
+        </a>
+        <p class="footer-tagline">Crafting solutions with code and creativity.</p>
+        <div class="footer-socials">
+          <a href="https://github.com/sxndy66" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://linkedin.com/in/santhoshvelu" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="mailto:santhosh023166@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+        <p class="footer-copy">&copy; <span id="footerYear"></span> Santhosh Velu. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-top" id="backTop" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast" role="alert" aria-live="polite"></div>
+
+  <!-- Three.js via CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
